@@ -1,0 +1,62 @@
+body {
+  margin: 0px;
+  text-align: center;
+
+  background-color: white;
+  color: black;
+
+  transition-property: color, background-color;
+  transition-duration: 2s;
+  transition-timing-function: linear;
+  transition-delay: 0s;
+}
+body.dark {
+  background-color: black;
+  color: white;
+}
+
+#lightBox {
+  position: fixed;
+  top: 0px;
+  left: 0px;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+#lightBox.hidden {
+  display: none;
+}
+#gallery {
+  max-width: 800px;
+  margin: 0px auto;
+}
+img {
+  position: static;
+  /*keep the ratio*/
+  width:  300px;
+  height: auto;
+  margin: 20px;
+}
+img.zoom {
+  position: fixed;
+  /*start the image at the middle of the page*/
+  left: 50%;
+  top: 50%;
+  /*make image relative to itself*/
+  transform: translate(-50%, -50%);
+  width: 90%;
+  margin: 0px;
+
+/*make sure the image will be on top on everything*/
+  z-index: 1;
+
+  /* note: because the transition is only on the added class, */
+  /* it will not transition back when the class is removed */
+  transition-property: width;
+  transition-duration: 0.5s;
+  transition-timing-function: ease-in-out;
+  transition-delay: 0s;
+
+  /* same code written in one line */
+  /*transition: width 0.5s linear 0s;*/
+}

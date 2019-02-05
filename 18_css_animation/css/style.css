@@ -1,0 +1,81 @@
+body {
+  margin: 0px;
+  text-align: center;
+}
+.flexbox {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 0px;
+}
+.flexbox > * {
+  margin: 20px;
+}
+
+.clickable {
+  cursor: pointer;
+}
+
+
+.rotate {
+  animation-name: roundAndRound;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-duration: 8s;
+}
+.fast {
+  animation-duration: 1s;
+}
+.backwards {
+  animation-direction: reverse;
+}
+
+
+@keyframes roundAndRound {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+
+
+.title {
+  font-size: 30px;
+  height: 50px;
+  padding: 50px;
+  text-transform: uppercase;
+}
+.reveal {
+  background-color: black;
+  height: 150px;
+
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  width: 0%;
+
+  animation: swipe;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: 1;
+  animation-direction: normal;
+  animation-duration: 2s;
+}
+@keyframes swipe {
+  0% {
+    width: 100%;
+  }
+  55% {
+    width: 90%;
+  }
+  70% {
+    width: 95%;
+  }
+  100% {
+    width: 0%;
+  }
+}

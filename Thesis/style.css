@@ -1,0 +1,27 @@
+
+/* dont edit this CSS */
+body{
+  /*background: lightblue;*/
+}
+.by8{
+  fill: salmon;
+  border: 1px solid black;
+  padding: 20px;
+  min-height: 100px;
+  margin: 10px;
+  align-content: flex-end;
+}
+.flex {
+  display: flex;
+  flex-direction: row;
+}
+.flexEnd {
+  justify-content: flex-end;
+}
+
+.half {
+  width: 50%;
+}
+.fill {
+  flex: 1;
+}
